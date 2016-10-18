@@ -31,7 +31,8 @@ export default class Priestley extends Viz {
   }
 
   /**
-      Extends the render behavior of the abstract Viz class.
+      @memberof Priestley
+      @desc Extends the render behavior of the abstract Viz class.
       @private
   */
   render(callback) {
@@ -133,7 +134,7 @@ export default class Priestley extends Viz {
   }
 
   /**
-      @memberof Plot
+      @memberof Priestley
       @desc If *value* is specified, sets the config method for the axis and returns the current class instance. If *value* is not specified, returns the current axis configuration.
       @param {Object} [*value*]
   */
@@ -142,7 +143,7 @@ export default class Priestley extends Viz {
   }
 
   /**
-      @memberof Plot
+      @memberof Priestley
       @desc If *value* is specified, sets the end accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current end accessor.
       @param {Function|String} [*value*]
   */
@@ -159,7 +160,7 @@ export default class Priestley extends Viz {
   }
 
   /**
-      @memberof Plot
+      @memberof Priestley
       @desc If *value* is specified, sets the start accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current start accessor.
       @param {Function|String} [*value*]
   */
