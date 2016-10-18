@@ -23,7 +23,7 @@ export default class Priestley extends Viz {
 
     super();
     this._axis = new Axis().align("end").orient("bottom");
-    this._axisConfig = {scale: "linear"};
+    this._axisConfig = {scale: "time"};
     this._axisTest = new Axis().align("end").gridSize(0).orient("bottom");
     this.end("end");
     this.start("start");
