@@ -24,10 +24,13 @@
     "url": "http://www.dave-landry.com"
   },
   "dependencies": {
+    "d3-array": "^1.0.1",
+    "d3-collection": "^1.0.1",
+    "d3-scale": "^1.0.3",
     "d3plus-axis": "^0.3.10",
-    "d3plus-common": "^0.5.23",
+    "d3plus-common": "^0.5.25",
     "d3plus-shape": "^0.8.18",
-    "d3plus-viz": "^0.3.3"
+    "d3plus-viz": "^0.3.4"
   },
   "scripts": {
     "build": "d3plus-build",
