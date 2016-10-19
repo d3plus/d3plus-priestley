@@ -45,7 +45,7 @@ export default class Priestley extends Viz {
       i,
       id: this._id(data, i),
       start: this._axisConfig.scale === "time" ? date(this._start(data, i)) : this._start(data, i)
-    })).sort((a, b) => a.start - b.start);
+    })).filter(d => d.end - d.start > 0).sort((a, b) => a.start - b.start);
 
     let nestedData;
     if (this._groupBy.length > 1 && this._drawDepth > 0) {
@@ -120,10 +120,13 @@ export default class Priestley extends Viz {
         }, {})})
       .data(data)
       .duration(this._duration)
-      .height(step - this._padding)
+      .height(step >= this._padding * 2 ? step - this._padding : step > 2 ? step - 2 : step)
       .label((d, i) => this._drawLabel(d.data, i))
       .select(elem("g.d3plus-priestley-shapes", {parent: this._select}).node())
-      .width(d => xScale(d.end) - xScale(d.start) - 2)
+      .width(d => {
+        const w = xScale(d.end) - xScale(d.start);
+        return w > 2 ? w - 2 : w;
+      })
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
       .config(config)
