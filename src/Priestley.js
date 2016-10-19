@@ -124,7 +124,7 @@ export default class Priestley extends Viz {
       .label((d, i) => this._drawLabel(d.data, i))
       .select(elem("g.d3plus-priestley-shapes", {parent: this._select}).node())
       .width(d => {
-        const w = xScale(d.end) - xScale(d.start);
+        const w = Math.abs(xScale(d.end) - xScale(d.start));
         return w > 2 ? w - 2 : w;
       })
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
