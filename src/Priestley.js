@@ -74,7 +74,7 @@ export default class Priestley extends Viz {
     });
 
     const axisConfig = {
-      domain: [min(data, d => d.start), max(data, d => d.end)],
+      domain: [min(data, d => d.start) || 0, max(data, d => d.end) || 0],
       height: this._height - this._margin.top - this._margin.bottom,
       width: this._width - this._margin.left - this._margin.right
     };
