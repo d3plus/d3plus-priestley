@@ -44,7 +44,7 @@ new d3plus.Priestley()
 
 ### More Examples
 
- * [Grouping into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)<sup> ***New***</sup>
+ * [Grouping into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)
 
 ## API Reference
 <a name="Priestley"></a>
@@ -99,4 +99,4 @@ If *value* is specified, sets the start accessor to the specified function or ke
 
 
 
-###### <sub>Documentation generated on Fri, 21 Oct 2016 21:30:11 GMT</sub>
+###### <sub>Documentation generated on Mon, 31 Oct 2016 21:36:45 GMT</sub>
