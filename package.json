@@ -28,9 +28,9 @@
     "d3-collection": "^1.0.1",
     "d3-scale": "^1.0.3",
     "d3plus-axis": "^0.3.11",
-    "d3plus-common": "^0.6.7",
+    "d3plus-common": "^0.6.8",
     "d3plus-shape": "^0.8.19",
-    "d3plus-viz": "^0.3.11"
+    "d3plus-viz": "^0.3.12"
   },
   "scripts": {
     "build": "d3plus-build",
