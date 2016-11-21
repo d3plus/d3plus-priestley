@@ -40,6 +40,7 @@ export default class Priestley extends Viz {
     super.render(callback);
 
     const data = this._filteredData.map((data, i) => ({
+      __d3plus__: true,
       data,
       end: this._axisConfig.scale === "time" ? date(this._end(data, i)) : this._end(data, i),
       i,
@@ -86,6 +87,7 @@ export default class Priestley extends Viz {
       .config(this._axisConfig)
       .select(elem("g.d3plus-priestley-axis-test", {parent: this._select, enter: {opacity: 0}}).node())
       .render();
+
     this._axis
       .config(axisConfig)
       .config(this._axisConfig)
@@ -103,21 +105,7 @@ export default class Priestley extends Viz {
 
     const step = yScale.step();
 
-    const c = this._shapeConfig, config = {};
-    for (const k in c) {
-      if (k !== "labelBounds" && {}.hasOwnProperty.call(c, k)) {
-        if (typeof c[k] === "function") config[k] = (d, i) => c[k](d.data, i);
-        else config[k] = c[k];
-      }
-    }
-
     this._shapes.push(new Rect()
-      .config({on: Object.keys(this._on)
-        .filter(e => !e.includes(".") || e.includes(".shape"))
-        .reduce((obj, e) => {
-          obj[e] = (d, i) => this._on[e] ? this._on[e](d.data, i) : null;
-          return obj;
-        }, {})})
       .data(data)
       .duration(this._duration)
       .height(step >= this._padding * 2 ? step - this._padding : step > 2 ? step - 2 : step)
@@ -129,7 +117,7 @@ export default class Priestley extends Viz {
       })
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
-      .config(config)
+      .config(this._shapeConfigPrep("Rect"))
       .render());
 
     return this;
