@@ -3,7 +3,7 @@ import {nest} from "d3-collection";
 import {scalePoint} from "d3-scale";
 
 import {Axis, date} from "d3plus-axis";
-import {accessor, elem} from "d3plus-common";
+import {accessor, assign, elem} from "d3plus-common";
 import {Rect} from "d3plus-shape";
 import {Viz} from "d3plus-viz";
 
@@ -130,7 +130,7 @@ export default class Priestley extends Viz {
       @param {Object} [*value*]
   */
   axisConfig(_) {
-    return arguments.length ? (this._axisConfig = Object.assign(this._axisConfig, _), this) : this._axisConfig;
+    return arguments.length ? (this._axisConfig = assign(this._axisConfig, _), this) : this._axisConfig;
   }
 
   /**
