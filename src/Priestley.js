@@ -133,6 +133,7 @@ export default class Priestley extends Viz {
       @memberof Priestley
       @desc If *value* is specified, sets the config method for the axis and returns the current class instance. If *value* is not specified, returns the current axis configuration.
       @param {Object} [*value*]
+      @chainable
   */
   axisConfig(_) {
     return arguments.length ? (this._axisConfig = assign(this._axisConfig, _), this) : this._axisConfig;
@@ -142,6 +143,7 @@ export default class Priestley extends Viz {
       @memberof Priestley
       @desc If *value* is specified, sets the end accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current end accessor.
       @param {Function|String} [*value*]
+      @chainable
   */
   end(_) {
     if (arguments.length) {
@@ -159,6 +161,7 @@ export default class Priestley extends Viz {
       @memberof Priestley
       @desc If *value* is specified, sets the start accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current start accessor.
       @param {Function|String} [*value*]
+      @chainable
   */
   start(_) {
     if (arguments.length) {
