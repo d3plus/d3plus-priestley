@@ -49,15 +49,15 @@ new d3plus.Priestley()
 ## API Reference
 <a name="Priestley"></a>
 
-### Priestley ⇐ <code>Viz</code>
+### Priestley ⇐ <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>Viz</code>  
+**Extends:** <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>  
 
-* [Priestley](#Priestley) ⇐ <code>Viz</code>
+* [Priestley](#Priestley) ⇐ <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>
     * [new Priestley()](#new_Priestley_new)
-    * [.axisConfig([*value*])](#Priestley.axisConfig)
-    * [.end([*value*])](#Priestley.end)
-    * [.start([*value*])](#Priestley.start)
+    * [.axisConfig([*value*])](#Priestley.axisConfig) ↩︎
+    * [.end([*value*])](#Priestley.end) ↩︎
+    * [.start([*value*])](#Priestley.start) ↩︎
 
 <a name="new_Priestley_new"></a>
 
@@ -66,10 +66,11 @@ Creates a priestley timeline based on an array of data.
 
 <a name="Priestley.axisConfig"></a>
 
-#### Priestley.axisConfig([*value*])
+#### Priestley.axisConfig([*value*]) ↩︎
 If *value* is specified, sets the config method for the axis and returns the current class instance. If *value* is not specified, returns the current axis configuration.
 
 **Kind**: static method of <code>[Priestley](#Priestley)</code>  
+**Chainable**  
 
 | Param | Type |
 | --- | --- |
@@ -77,10 +78,11 @@ If *value* is specified, sets the config method for the axis and returns the cur
 
 <a name="Priestley.end"></a>
 
-#### Priestley.end([*value*])
+#### Priestley.end([*value*]) ↩︎
 If *value* is specified, sets the end accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current end accessor.
 
 **Kind**: static method of <code>[Priestley](#Priestley)</code>  
+**Chainable**  
 
 | Param | Type |
 | --- | --- |
@@ -88,10 +90,11 @@ If *value* is specified, sets the end accessor to the specified function or key 
 
 <a name="Priestley.start"></a>
 
-#### Priestley.start([*value*])
+#### Priestley.start([*value*]) ↩︎
 If *value* is specified, sets the start accessor to the specified function or key and returns the current class instance. If *value* is not specified, returns the current start accessor.
 
 **Kind**: static method of <code>[Priestley](#Priestley)</code>  
+**Chainable**  
 
 | Param | Type |
 | --- | --- |
@@ -99,4 +102,4 @@ If *value* is specified, sets the start accessor to the specified function or ke
 
 
 
-###### <sub>Documentation generated on Mon, 05 Dec 2016 04:12:36 GMT</sub>
+###### <sub>Documentation generated on Fri, 09 Dec 2016 21:47:11 GMT</sub>
