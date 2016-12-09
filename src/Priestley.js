@@ -1,3 +1,8 @@
+/**
+    @external Viz
+    @see https://github.com/d3plus/d3plus-viz#Viz
+*/
+
 import {min, max, range} from "d3-array";
 import {nest} from "d3-collection";
 import {scalePoint} from "d3-scale";
@@ -9,7 +14,7 @@ import {Viz} from "d3plus-viz";
 
 /**
     @class Priestley
-    @extends Viz
+    @extends external:Viz
     @desc Creates a priestley timeline based on an array of data.
 */
 export default class Priestley extends Viz {
