@@ -51,7 +51,7 @@ new d3plus.Priestley()
 
 ### Priestley ⇐ <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>  
+**Extends**: <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>  
 
 * [Priestley](#Priestley) ⇐ <code>[Viz](https://github.com/d3plus/d3plus-viz#Viz)</code>
     * [new Priestley()](#new_Priestley_new)
@@ -102,4 +102,4 @@ If *value* is specified, sets the start accessor to the specified function or ke
 
 
 
-###### <sub>Documentation generated on Tue, 20 Dec 2016 20:42:11 GMT</sub>
+###### <sub>Documentation generated on Mon, 13 Mar 2017 19:31:19 GMT</sub>
