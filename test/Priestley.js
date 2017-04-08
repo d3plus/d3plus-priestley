@@ -1,14 +1,10 @@
-import {test} from "tape";
+import zora from "zora";
 import {default as Priestley} from "../src/Priestley.js";
 
-test("Priestley", assert => {
+export default zora()
+  .test("Priestley", function *(assert) {
 
-  new Priestley()
-    .render(() => {
+    yield cb => new Priestley().render(cb);
+    assert.ok(true, "function success");
 
-      assert.true(true, "function success");
-      assert.end();
-
-    });
-
-});
+  });
