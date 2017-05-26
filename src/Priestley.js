@@ -8,7 +8,7 @@ import {nest} from "d3-collection";
 import {scalePoint} from "d3-scale";
 
 import {Axis, date} from "d3plus-axis";
-import {accessor, assign, elem} from "d3plus-common";
+import {accessor, assign, configPrep, elem} from "d3plus-common";
 import {Rect} from "d3plus-shape";
 import {Viz} from "d3plus-viz";
 
@@ -122,7 +122,7 @@ export default class Priestley extends Viz {
       })
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
-      .config(this._shapeConfigPrep("Rect"))
+      .config(configPrep.bind(this)(this._shapeConfig, "shape", "Rect"))
       .render());
 
     return this;
