@@ -1,4 +1,4 @@
-# Grouping into Lanes
+# Grouping Priestley Bars into Lanes
 
 If the data provided has inherent groupings, as such:
 
