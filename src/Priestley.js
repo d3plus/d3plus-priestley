@@ -44,6 +44,8 @@ export default class Priestley extends Viz {
 
     super.render(callback);
 
+    if (!this._filteredData) return this;
+
     const data = this._filteredData.map((data, i) => ({
       __d3plus__: true,
       data,
