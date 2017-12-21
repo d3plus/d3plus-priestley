@@ -27,10 +27,10 @@
     "d3-array": "^1.2.0",
     "d3-collection": "^1.0.1",
     "d3-scale": "^1.0.6",
-    "d3plus-axis": "^0.3.33",
-    "d3plus-common": "^0.6.22",
-    "d3plus-shape": "^0.13.5",
-    "d3plus-viz": "^0.10.2"
+    "d3plus-axis": "^0.3.41",
+    "d3plus-common": "^0.6.29",
+    "d3plus-shape": "^0.13.11",
+    "d3plus-viz": "^0.10.14"
   },
   "scripts": {
     "build": "d3plus-build",
@@ -42,6 +42,6 @@
     "test": "d3plus-test"
   },
   "devDependencies": {
-    "d3plus-dev": "^0.4.19"
+    "d3plus-dev": "^0.5.4"
   }
 }
