@@ -41,11 +41,11 @@ new d3plus.Priestley()
 
 ### More Examples
 
- * [Grouping Priestley Bars into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)<sup> ***New***</sup>
+ * [Grouping Priestley Bars into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)
 
 ## API Reference
 
-##### Classes
+##### 
 * [Priestley](#Priestley)
 
 ---
@@ -99,4 +99,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Wed, 30 Aug 2017 22:00:51 GMT</sub>
+###### <sub>Documentation generated on Thu, 21 Dec 2017 22:26:07 GMT</sub>
