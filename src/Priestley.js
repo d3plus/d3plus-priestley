@@ -10,16 +10,7 @@ import {scalePoint} from "d3-scale";
 import {Axis, date} from "d3plus-axis";
 import {accessor, assign, configPrep, elem} from "d3plus-common";
 import {Rect} from "d3plus-shape";
-import {Viz} from "d3plus-viz";
-
-/**
-    @function constructAriaLabel
-    @desc Returns value for aria-label property of Shapes.
-    @private
-*/
-function constructAriaLabel(d, i) {
-  return this._drawLabel(d, i) + ", " + d.data.start + " - " + d.data.end + ".";
-} 
+import {Viz} from "d3plus-viz"; 
 
 /**
     @class Priestley
@@ -134,7 +125,7 @@ export default class Priestley extends Viz {
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
       .config(configPrep.bind(this)(this._shapeConfig, "shape", "Rect"))
-      .config({ariaLabel: constructAriaLabel.bind(this)})
+      .config({ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${d.data.start} - ${d.data.end}.`})
       .render());
 
     return this;
