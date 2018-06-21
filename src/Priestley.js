@@ -13,6 +13,15 @@ import {Rect} from "d3plus-shape";
 import {Viz} from "d3plus-viz";
 
 /**
+    @function constructAriaLabel
+    @desc Returns value for aria-label property of Shapes.
+    @private
+*/
+function constructAriaLabel(d, i) {
+  return this._drawLabel(d, i) + ", " + d.data.start + " - " + d.data.end + ".";
+} 
+
+/**
     @class Priestley
     @extends external:Viz
     @desc Creates a priestley timeline based on an array of data.
@@ -125,6 +134,7 @@ export default class Priestley extends Viz {
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
       .config(configPrep.bind(this)(this._shapeConfig, "shape", "Rect"))
+      .config({ariaLabel: constructAriaLabel.bind(this)})
       .render());
 
     return this;
