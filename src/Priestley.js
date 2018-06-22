@@ -27,10 +27,14 @@ export default class Priestley extends Viz {
   constructor() {
 
     super();
+
     this._axis = new Axis().align("end").orient("bottom");
     this._axisConfig = {scale: "time"};
     this._axisTest = new Axis().align("end").gridSize(0).orient("bottom");
     this.end("end");
+    this._shapeConfig = assign({}, this._shapeConfig, {
+      ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${d.start} - ${d.end}.`
+    });
     this.start("start");
 
   }
@@ -125,7 +129,6 @@ export default class Priestley extends Viz {
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
       .y(d => yScale(d.lane))
       .config(configPrep.bind(this)(this._shapeConfig, "shape", "Rect"))
-      .config({ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${d.data.start} - ${d.data.end}.`})
       .render());
 
     return this;
