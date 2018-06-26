@@ -33,7 +33,7 @@ export default class Priestley extends Viz {
     this._axisTest = new Axis().align("end").gridSize(0).orient("bottom");
     this.end("end");
     this._shapeConfig = assign({}, this._shapeConfig, {
-      ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${d.start} - ${d.end}.`
+      ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${this._start(d, i)} - ${this._end(d, i)}.`
     });
     this.start("start");
 
