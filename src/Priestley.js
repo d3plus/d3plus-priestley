@@ -10,7 +10,7 @@ import {scalePoint} from "d3-scale";
 import {Axis, date} from "d3plus-axis";
 import {accessor, assign, configPrep, elem} from "d3plus-common";
 import {Rect} from "d3plus-shape";
-import {Viz} from "d3plus-viz"; 
+import {Viz} from "d3plus-viz";
 
 /**
     @class Priestley
