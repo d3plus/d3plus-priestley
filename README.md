@@ -9,7 +9,7 @@ A reusable Priestley timeline built on D3.
 If you use NPM, run `npm install d3plus-priestley --save`. Otherwise, download the [latest release](https://github.com/d3plus/d3plus-priestley/releases/latest). The released bundle supports AMD, CommonJS, and vanilla environments. You can also load directly from [d3plus.org](https://d3plus.org):
 
 ```html
-<script src="https://d3plus.org/js/d3plus-priestley.v0.2.full.min.js"></script>
+<script src="https://d3plus.org/js/d3plus-priestley.v0.3.full.min.js"></script>
 ```
 
 
@@ -99,4 +99,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Wed, 15 Aug 2018 14:16:37 GMT</sub>
+###### <sub>Documentation generated on Fri, 28 Sep 2018 17:21:13 GMT</sub>
