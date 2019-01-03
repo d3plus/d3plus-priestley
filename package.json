@@ -1,6 +1,6 @@
 {
   "name": "d3plus-priestley",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A reusable Priestley timeline built on D3.",
   "main": "build/d3plus-priestley.js",
   "jsnext:main": "es/index",
