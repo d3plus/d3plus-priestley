@@ -99,4 +99,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Thu, 03 Jan 2019 22:49:46 GMT</sub>
+###### <sub>Documentation generated on Fri, 08 Mar 2019 17:11:36 GMT</sub>
