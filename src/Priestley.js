@@ -44,9 +44,9 @@ export default class Priestley extends Viz {
       @desc Extends the render behavior of the abstract Viz class.
       @private
   */
-  render(callback) {
+  _draw(callback) {
 
-    super.render(callback);
+    super._draw(callback);
 
     if (!this._filteredData) return this;
 
