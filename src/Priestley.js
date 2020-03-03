@@ -5,7 +5,7 @@
 
 import {min, max, range} from "d3-array";
 import {nest} from "d3-collection";
-import {scalePoint} from "d3-scale";
+import {scaleBand} from "d3-scale";
 
 import {Axis, date} from "d3plus-axis";
 import {accessor, assign, configPrep, elem} from "d3plus-common";
@@ -32,6 +32,8 @@ export default class Priestley extends Viz {
     this._axisConfig = {scale: "time"};
     this._axisTest = new Axis().align("end").gridSize(0).orient("bottom");
     this.end("end");
+    this._paddingInner = 0.05;
+    this._paddingOuter = 0.05;
     this._shapeConfig = assign({}, this._shapeConfig, {
       ariaLabel: (d, i) => `${this._drawLabel(d, i)}, ${this._start(d, i)} - ${this._end(d, i)}.`
     });
@@ -109,17 +111,18 @@ export default class Priestley extends Viz {
 
     const xScale = this._axis._d3Scale;
 
-    const yScale = scalePoint()
+    const yScale = scaleBand()
       .domain(range(0, maxLane, 1))
-      .padding(0.5)
+      .paddingInner(this._paddingInner)
+      .paddingOuter(this._paddingOuter)
       .rangeRound([this._height - this._margin.bottom - this._axisTest.outerBounds().height - axisPad, this._margin.top + axisPad]);
 
-    const step = yScale.step();
+    const bandWidth = yScale.bandwidth();
 
     this._shapes.push(new Rect()
       .data(data)
       .duration(this._duration)
-      .height(step >= this._padding * 2 ? step - this._padding : step > 2 ? step - 2 : step)
+      .height(bandWidth)
       .label((d, i) => this._drawLabel(d.data, i))
       .select(elem("g.d3plus-priestley-shapes", {parent: this._select}).node())
       .width(d => {
@@ -127,7 +130,7 @@ export default class Priestley extends Viz {
         return w > 2 ? w - 2 : w;
       })
       .x(d => xScale(d.start) + (xScale(d.end) - xScale(d.start)) / 2)
-      .y(d => yScale(d.lane))
+      .y(d => yScale(d.lane) + bandWidth / 2)
       .config(configPrep.bind(this)(this._shapeConfig, "shape", "Rect"))
       .render());
 
@@ -161,6 +164,26 @@ export default class Priestley extends Viz {
       return this;
     }
     else return this._end;
+  }
+
+  /**
+      @memberof Priestley
+      @desc Sets the [paddingInner](https://github.com/d3/d3-scale#band_paddingInner) value of the underlining [Band Scale](https://github.com/d3/d3-scale#band-scales) used to determine the height of each bar. Values should be a ratio between 0 and 1 representing the space in between each rectangle.
+      @param {Number} [*value* = 0.05]
+      @chainable
+  */
+  paddingInner(_) {
+    return arguments.length ? (this._paddingInner = _, this) : this._paddingInner;
+  }
+
+  /**
+      @memberof Priestley
+      @desc Sets the [paddingOuter](https://github.com/d3/d3-scale#band_paddingOuter) value of the underlining [Band Scale](https://github.com/d3/d3-scale#band-scales) used to determine the height of each bar. Values should be a ratio between 0 and 1 representing the space around the outer rectangles.
+      @param {Number} [*value* = 0.05]
+      @chainable
+  */
+  paddingOuter(_) {
+    return arguments.length ? (this._paddingOuter = _, this) : this._paddingOuter;
   }
 
   /**
