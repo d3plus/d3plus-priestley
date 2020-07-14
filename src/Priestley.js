@@ -159,7 +159,7 @@ export default class Priestley extends Viz {
       if (typeof _ === "function") this._end = _;
       else {
         this._end = accessor(_);
-        if (!this._aggs[_]) this._aggs[_] = a => max(a);
+        if (!this._aggs[_]) this._aggs[_] = max;
       }
       return this;
     }
@@ -197,7 +197,7 @@ export default class Priestley extends Viz {
       if (typeof _ === "function") this._start = _;
       else {
         this._start = accessor(_);
-        if (!this._aggs[_]) this._aggs[_] = a => min(a);
+        if (!this._aggs[_]) this._aggs[_] = min;
       }
       return this;
     }
