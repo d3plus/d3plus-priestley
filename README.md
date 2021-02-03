@@ -1,15 +1,18 @@
 # d3plus-priestley
 
-[![NPM Release](http://img.shields.io/npm/v/d3plus-priestley.svg?style=flat)](https://www.npmjs.org/package/d3plus-priestley) [![Build Status](https://travis-ci.org/d3plus/d3plus-priestley.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-priestley) [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-priestley.svg?style=flat)](https://david-dm.org/d3plus/d3plus-priestley) [![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/) 
+[![NPM Release](http://img.shields.io/npm/v/d3plus-priestley.svg?style=flat)](https://www.npmjs.org/package/d3plus-priestley) [![Build Status](https://travis-ci.org/d3plus/d3plus-priestley.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-priestley) [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-priestley.svg?style=flat)](https://david-dm.org/d3plus/d3plus-priestley) [![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/)
 
 A reusable Priestley timeline built on D3.
 
 ## Installing
 
-If you use NPM, run `npm install d3plus-priestley --save`. Otherwise, download the [latest release](https://github.com/d3plus/d3plus-priestley/releases/latest). The released bundle supports AMD, CommonJS, and vanilla environments. You can also load directly from [d3plus.org](https://d3plus.org):
+If you use NPM, `npm install d3plus-priestley`. Otherwise, download the [latest release](https://github.com/d3plus/d3plus-priestley/releases/latest). You can also load d3plus-priestley as a standalone library or as part of [D3plus](https://github.com/d3plus/d3plus). ES modules, AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3plus` global is exported:
 
 ```html
-<script src="https://d3plus.org/js/d3plus-priestley.v0.4.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3plus-priestley@1"></script>
+<script>
+  console.log(d3plus);
+</script>
 ```
 
 
@@ -117,4 +120,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Tue, 14 Jul 2020 21:42:12 GMT</sub>
+###### <sub>Documentation generated on Wed, 03 Feb 2021 14:23:14 GMT</sub>
