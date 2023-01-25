@@ -1,1 +1,1 @@
-export {default as Priestley} from "./src/Priestley";
+export {default as Priestley} from "./src/Priestley.js";
