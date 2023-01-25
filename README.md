@@ -1,12 +1,16 @@
 # d3plus-priestley
 
-[![NPM Release](http://img.shields.io/npm/v/d3plus-priestley.svg?style=flat)](https://www.npmjs.org/package/d3plus-priestley) [![Build Status](https://travis-ci.org/d3plus/d3plus-priestley.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-priestley) [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-priestley.svg?style=flat)](https://david-dm.org/d3plus/d3plus-priestley) [![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/)
-
 A reusable Priestley timeline built on D3.
 
 ## Installing
 
-If you use NPM, `npm install d3plus-priestley`. Otherwise, download the [latest release](https://github.com/d3plus/d3plus-priestley/releases/latest). You can also load d3plus-priestley as a standalone library or as part of [D3plus](https://github.com/d3plus/d3plus). ES modules, AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3plus` global is exported:
+If using npm, `npm install d3plus-priestley`. Otherwise, you can download the [latest release from GitHub](https://github.com/d3plus/d3plus-priestley/releases/latest) or load from a [CDN](https://cdn.jsdelivr.net/npm/d3plus-priestley@1).
+
+```js
+import modules from "d3plus-priestley";
+```
+
+d3plus-priestley can be loaded as a standalone library or bundled as part of [D3plus](https://github.com/d3plus/d3plus). ES modules, AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3plus` global is exported:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/d3plus-priestley@1"></script>
@@ -15,36 +19,9 @@ If you use NPM, `npm install d3plus-priestley`. Otherwise, download the [latest 
 </script>
 ```
 
+## Examples
 
-## Simple Priestley Diagram
-
-Priestly Timelines (named after 18th-century English theologian [Joseph Priestly](https://en.wikipedia.org/wiki/Joseph_Priestley)), show the duration of multiple data points over time by stacking blocks to best fit. Given data with unique IDs and start and end dates:
-
-```js
-var data = [
-  {id: "alpha",   start: 2004, end: 2007},
-  {id: "epsilon", start: 2007, end: 2012},
-  {id: "beta",    start: 2005, end: 2010},
-];
-```
-
-It's only requires a few lines of code to create a Priestly Timeline:
-
-```js
-new d3plus.Priestley()
-  .data(data)
-  .render();
-```
-
-
-[<kbd><img src="/example/getting-started.png" width="990px" /></kbd>](https://d3plus.org/examples/d3plus-priestley/getting-started/)
-
-[Click here](https://d3plus.org/examples/d3plus-priestley/getting-started/) to view this example live on the web.
-
-
-### More Examples
-
- * [Grouping Priestley Bars into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)
+Live examples can be found on [d3plus.org](https://d3plus.org/), which includes a collection of example visualizations using [d3plus-react](https://github.com/d3plus/d3plus-react/). These examples are powered by the [d3plus-storybook](https://github.com/d3plus/d3plus-storybook/) repo, and PRs are always welcome. :beers:
 
 ## API Reference
 
@@ -120,4 +97,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Wed, 03 Feb 2021 14:23:14 GMT</sub>
+###### <sub>Documentation generated on Wed, 25 Jan 2023 18:11:33 GMT</sub>
