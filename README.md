@@ -15,37 +15,6 @@ If you use NPM, `npm install d3plus-priestley`. Otherwise, download the [latest 
 </script>
 ```
 
-
-## Simple Priestley Diagram
-
-Priestly Timelines (named after 18th-century English theologian [Joseph Priestly](https://en.wikipedia.org/wiki/Joseph_Priestley)), show the duration of multiple data points over time by stacking blocks to best fit. Given data with unique IDs and start and end dates:
-
-```js
-var data = [
-  {id: "alpha",   start: 2004, end: 2007},
-  {id: "epsilon", start: 2007, end: 2012},
-  {id: "beta",    start: 2005, end: 2010},
-];
-```
-
-It's only requires a few lines of code to create a Priestly Timeline:
-
-```js
-new d3plus.Priestley()
-  .data(data)
-  .render();
-```
-
-
-[<kbd><img src="/example/getting-started.png" width="990px" /></kbd>](https://d3plus.org/examples/d3plus-priestley/getting-started/)
-
-[Click here](https://d3plus.org/examples/d3plus-priestley/getting-started/) to view this example live on the web.
-
-
-### More Examples
-
- * [Grouping Priestley Bars into Lanes](http://d3plus.org/examples/d3plus-priestley/grouping/)
-
 ## API Reference
 
 ##### 
@@ -120,4 +89,4 @@ This is a static method of [<code>Priestley</code>](#Priestley), and is chainabl
 
 
 
-###### <sub>Documentation generated on Wed, 03 Feb 2021 14:23:14 GMT</sub>
+###### <sub>Documentation generated on Tue, 26 Mar 2024 18:09:22 GMT</sub>
